@@ -1,0 +1,5 @@
+[console_scripts]
+leader = multi_robot_challenge_23.leader:main
+marker_recognition = multi_robot_challenge_23.marker_pose:main
+robot_handler = multi_robot_challenge_23.robot_handler:main
+

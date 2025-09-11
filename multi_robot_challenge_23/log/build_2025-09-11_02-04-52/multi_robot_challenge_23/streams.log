@@ -1,0 +1,58 @@
+[1.117s] Invoking command in '/home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/build/multi_robot_challenge_23': PYTHONPATH=/home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/build/multi_robot_challenge_23/prefix_override:/home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/build/multi_robot_challenge_23/build --no-deps install_data
+[1.553s] running develop
+[1.770s] running egg_info
+[1.770s] creating multi_robot_challenge_23.egg-info
+[1.771s] writing multi_robot_challenge_23.egg-info/PKG-INFO
+[1.771s] writing dependency_links to multi_robot_challenge_23.egg-info/dependency_links.txt
+[1.771s] writing entry points to multi_robot_challenge_23.egg-info/entry_points.txt
+[1.771s] writing requirements to multi_robot_challenge_23.egg-info/requires.txt
+[1.777s] writing top-level names to multi_robot_challenge_23.egg-info/top_level.txt
+[1.779s] writing manifest file 'multi_robot_challenge_23.egg-info/SOURCES.txt'
+[1.817s] reading manifest file 'multi_robot_challenge_23.egg-info/SOURCES.txt'
+[1.818s] writing manifest file 'multi_robot_challenge_23.egg-info/SOURCES.txt'
+[1.873s] running build_ext
+[1.873s] Creating /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/lib/python3.8/site-packages/site.py
+[1.878s] Creating /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/lib/python3.8/site-packages/multi-robot-challenge-23.egg-link (link to .)
+[1.879s] Installing leader script to /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/lib/multi_robot_challenge_23
+[1.879s] Installing marker_recognition script to /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/lib/multi_robot_challenge_23
+[1.880s] Installing robot_handler script to /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/lib/multi_robot_challenge_23
+[1.881s] 
+[1.881s] Installed /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/build/multi_robot_challenge_23
+[1.881s] running install_data
+[1.883s] creating /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/ament_index
+[1.884s] creating /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/ament_index/resource_index
+[1.885s] creating /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/ament_index/resource_index/packages
+[1.886s] copying resource/multi_robot_challenge_23 -> /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/ament_index/resource_index/packages
+[1.887s] copying package.xml -> /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23
+[1.888s] creating /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23/launch
+[1.888s] copying launch/rescue_robots_w1.launch.py -> /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23/launch
+[1.890s] copying launch/spawn_robot.launch.py -> /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23/launch
+[1.890s] copying launch/rescue_robots_w5.launch.py -> /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23/launch
+[1.890s] copying launch/rescue_robots_w2.launch.py -> /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23/launch
+[1.890s] copying launch/rescue_robots_w4.launch.py -> /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23/launch
+[1.890s] copying launch/rescue_robots_w3.launch.py -> /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23/launch
+[1.890s] copying launch/aruco_recognition.launch.py -> /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23/launch
+[1.890s] creating /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23/worlds
+[1.891s] copying worlds/dat160_w5.world -> /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23/worlds
+[1.894s] copying worlds/dat160_w2.world -> /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23/worlds
+[1.894s] copying worlds/dat160_w1.world -> /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23/worlds
+[1.894s] copying worlds/dat160_w3.world -> /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23/worlds
+[1.895s] copying worlds/dat160_w4.world -> /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23/worlds
+[1.895s] creating /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23/rviz
+[1.895s] copying rviz/model.rviz -> /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23/rviz
+[1.895s] creating /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23/urdf
+[1.895s] copying urdf/turtlebot3_waffle_pi.gazebo.xacro -> /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23/urdf
+[1.895s] copying urdf/turtlebot3_waffle_pi.urdf.xacro -> /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23/urdf
+[1.896s] copying urdf/common_properties.xacro -> /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23/urdf
+[1.896s] creating /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23/maps
+[1.898s] copying maps/map_dat160_w4.yaml -> /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23/maps
+[1.898s] copying maps/map_dat160_w5.yaml -> /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23/maps
+[1.899s] copying maps/map_dat160_w3.yaml -> /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23/maps
+[1.899s] copying maps/map_dat160_w1.png -> /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23/maps
+[1.899s] copying maps/map_dat160_w4.png -> /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23/maps
+[1.899s] copying maps/map_dat160_w2.yaml -> /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23/maps
+[1.899s] copying maps/map_dat160_w2.png -> /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23/maps
+[1.899s] copying maps/map_dat160_w1.yaml -> /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23/maps
+[1.900s] copying maps/map_dat160_w5.png -> /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23/maps
+[1.900s] copying maps/map_dat160_w3.png -> /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/share/multi_robot_challenge_23/maps
+[1.950s] Invoked command in '/home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/build/multi_robot_challenge_23' returned '0': PYTHONPATH=/home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/build/multi_robot_challenge_23/prefix_override:/home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/install/multi_robot_challenge_23/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/build/multi_robot_challenge_23/build --no-deps install_data

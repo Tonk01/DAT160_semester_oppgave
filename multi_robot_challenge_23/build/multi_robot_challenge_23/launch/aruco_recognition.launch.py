@@ -1,0 +1,1 @@
+/home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/launch/aruco_recognition.launch.py
