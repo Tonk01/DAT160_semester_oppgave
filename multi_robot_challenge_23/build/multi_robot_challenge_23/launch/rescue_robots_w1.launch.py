@@ -1,1 +1,0 @@
-/home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/launch/rescue_robots_w1.launch.py

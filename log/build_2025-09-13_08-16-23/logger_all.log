@@ -1,0 +1,130 @@
+[0.257s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.257s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7ff9029d31c0>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=2, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7ff9029d31c0>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7ff9029d3700>)
+[0.284s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.284s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.284s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.284s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.284s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.285s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.285s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/rocotics/DAT160_semester_oppgave'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(multi_robot_challenge_23) by extensions ['ignore', 'ignore_ament_install']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(multi_robot_challenge_23) by extension 'ignore'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(multi_robot_challenge_23) by extension 'ignore_ament_install'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(multi_robot_challenge_23) by extensions ['colcon_pkg']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(multi_robot_challenge_23) by extension 'colcon_pkg'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(multi_robot_challenge_23) by extensions ['colcon_meta']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(multi_robot_challenge_23) by extension 'colcon_meta'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(multi_robot_challenge_23) by extensions ['ros']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(multi_robot_challenge_23) by extension 'ros'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(multi_robot_challenge_23) by extensions ['cmake', 'python']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(multi_robot_challenge_23) by extension 'cmake'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(multi_robot_challenge_23) by extension 'python'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(multi_robot_challenge_23) by extensions ['python_setup_py']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(multi_robot_challenge_23) by extension 'python_setup_py'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(multi_robot_challenge_23/src) by extensions ['ignore', 'ignore_ament_install']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(multi_robot_challenge_23/src) by extension 'ignore'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(multi_robot_challenge_23/src) by extension 'ignore_ament_install'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(multi_robot_challenge_23/src) by extensions ['colcon_pkg']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(multi_robot_challenge_23/src) by extension 'colcon_pkg'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(multi_robot_challenge_23/src) by extensions ['colcon_meta']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(multi_robot_challenge_23/src) by extension 'colcon_meta'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(multi_robot_challenge_23/src) by extensions ['ros']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(multi_robot_challenge_23/src) by extension 'ros'
+[0.297s] DEBUG:colcon.colcon_core.package_identification:Package 'multi_robot_challenge_23/src' with type 'ros.ament_python' and name 'multi_robot_challenge_23'
+[0.297s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.297s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.297s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.297s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.297s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.313s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.313s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.316s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/rocotics/DAT160_semester_oppgave/install
+[0.317s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 14 installed packages in /home/rocotics/ros2_ws/install
+[0.320s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 392 installed packages in /opt/ros/foxy
+[0.321s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.382s] Level 5:colcon.colcon_core.verb:set package 'multi_robot_challenge_23' build argument 'cmake_args' from command line to 'None'
+[0.382s] Level 5:colcon.colcon_core.verb:set package 'multi_robot_challenge_23' build argument 'cmake_target' from command line to 'None'
+[0.382s] Level 5:colcon.colcon_core.verb:set package 'multi_robot_challenge_23' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.383s] Level 5:colcon.colcon_core.verb:set package 'multi_robot_challenge_23' build argument 'cmake_clean_cache' from command line to 'False'
+[0.383s] Level 5:colcon.colcon_core.verb:set package 'multi_robot_challenge_23' build argument 'cmake_clean_first' from command line to 'False'
+[0.383s] Level 5:colcon.colcon_core.verb:set package 'multi_robot_challenge_23' build argument 'cmake_force_configure' from command line to 'False'
+[0.383s] Level 5:colcon.colcon_core.verb:set package 'multi_robot_challenge_23' build argument 'ament_cmake_args' from command line to 'None'
+[0.383s] Level 5:colcon.colcon_core.verb:set package 'multi_robot_challenge_23' build argument 'catkin_cmake_args' from command line to 'None'
+[0.383s] Level 5:colcon.colcon_core.verb:set package 'multi_robot_challenge_23' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.383s] DEBUG:colcon.colcon_core.verb:Building package 'multi_robot_challenge_23' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rocotics/DAT160_semester_oppgave/build/multi_robot_challenge_23', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23', 'merge_install': False, 'path': '/home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/src', 'symlink_install': False, 'test_result_base': None}
+[0.383s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.387s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.387s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/src' with build type 'ament_python'
+[0.387s] Level 1:colcon.colcon_core.shell:create_environment_hook('multi_robot_challenge_23', 'ament_prefix_path')
+[0.391s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.391s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/hook/ament_prefix_path.ps1'
+[0.392s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/hook/ament_prefix_path.dsv'
+[0.393s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/hook/ament_prefix_path.sh'
+[0.395s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.395s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.598s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/src'
+[0.600s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.600s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.999s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rocotics/DAT160_semester_oppgave/build/multi_robot_challenge_23': PYTHONPATH=/home/rocotics/DAT160_semester_oppgave/build/multi_robot_challenge_23/prefix_override:/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/rocotics/DAT160_semester_oppgave/build/multi_robot_challenge_23/build
+[1.375s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rocotics/DAT160_semester_oppgave/build/multi_robot_challenge_23' returned '0': PYTHONPATH=/home/rocotics/DAT160_semester_oppgave/build/multi_robot_challenge_23/prefix_override:/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/rocotics/DAT160_semester_oppgave/build/multi_robot_challenge_23/build
+[1.378s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/src': PYTHONPATH=/home/rocotics/DAT160_semester_oppgave/build/multi_robot_challenge_23/prefix_override:/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/multi_robot_challenge_23 build --build-base /home/rocotics/DAT160_semester_oppgave/build/multi_robot_challenge_23/build install --record /home/rocotics/DAT160_semester_oppgave/build/multi_robot_challenge_23/install.log --install-scripts $base/lib/multi_robot_challenge_23 --single-version-externally-managed
+[1.718s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/src' returned '0': PYTHONPATH=/home/rocotics/DAT160_semester_oppgave/build/multi_robot_challenge_23/prefix_override:/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/multi_robot_challenge_23 build --build-base /home/rocotics/DAT160_semester_oppgave/build/multi_robot_challenge_23/build install --record /home/rocotics/DAT160_semester_oppgave/build/multi_robot_challenge_23/install.log --install-scripts $base/lib/multi_robot_challenge_23 --single-version-externally-managed
+[1.725s] Level 1:colcon.colcon_core.environment:checking '/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23' for CMake module files
+[1.726s] Level 1:colcon.colcon_core.environment:checking '/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23' for CMake config files
+[1.728s] Level 1:colcon.colcon_core.environment:checking '/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib'
+[1.728s] Level 1:colcon.colcon_core.environment:checking '/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/bin'
+[1.728s] Level 1:colcon.colcon_core.environment:checking '/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/pkgconfig/multi_robot_challenge_23.pc'
+[1.728s] Level 1:colcon.colcon_core.environment:checking '/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/python3.8/site-packages'
+[1.728s] Level 1:colcon.colcon_core.shell:create_environment_hook('multi_robot_challenge_23', 'pythonpath')
+[1.730s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/hook/pythonpath.ps1'
+[1.731s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/hook/pythonpath.dsv'
+[1.731s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/hook/pythonpath.sh'
+[1.732s] Level 1:colcon.colcon_core.environment:checking '/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/bin'
+[1.732s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(multi_robot_challenge_23)
+[1.734s] INFO:colcon.colcon_core.shell:Creating package script '/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/package.ps1'
+[1.735s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/package.dsv'
+[1.735s] INFO:colcon.colcon_core.shell:Creating package script '/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/package.sh'
+[1.736s] INFO:colcon.colcon_core.shell:Creating package script '/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/package.bash'
+[1.736s] INFO:colcon.colcon_core.shell:Creating package script '/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/package.zsh'
+[1.737s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/colcon-core/packages/multi_robot_challenge_23)
+[1.738s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.738s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.738s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.738s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.744s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.744s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.744s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.797s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.798s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rocotics/DAT160_semester_oppgave/install/local_setup.ps1'
+[1.799s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/rocotics/DAT160_semester_oppgave/install/_local_setup_util_ps1.py'
+[1.800s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rocotics/DAT160_semester_oppgave/install/setup.ps1'
+[1.802s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rocotics/DAT160_semester_oppgave/install/local_setup.sh'
+[1.805s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/rocotics/DAT160_semester_oppgave/install/_local_setup_util_sh.py'
+[1.806s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rocotics/DAT160_semester_oppgave/install/setup.sh'
+[1.808s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rocotics/DAT160_semester_oppgave/install/local_setup.bash'
+[1.808s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rocotics/DAT160_semester_oppgave/install/setup.bash'
+[1.811s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rocotics/DAT160_semester_oppgave/install/local_setup.zsh'
+[1.814s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rocotics/DAT160_semester_oppgave/install/setup.zsh'
