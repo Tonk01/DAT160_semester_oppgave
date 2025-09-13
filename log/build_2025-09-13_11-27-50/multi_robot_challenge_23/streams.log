@@ -1,0 +1,30 @@
+[0.579s] Invoking command in '/home/rocotics/DAT160_semester_oppgave/build/multi_robot_challenge_23': PYTHONPATH=/home/rocotics/DAT160_semester_oppgave/build/multi_robot_challenge_23/prefix_override:/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/rocotics/DAT160_semester_oppgave/build/multi_robot_challenge_23/build
+[0.778s] running develop
+[0.903s] Invoked command in '/home/rocotics/DAT160_semester_oppgave/build/multi_robot_challenge_23' returned '0': PYTHONPATH=/home/rocotics/DAT160_semester_oppgave/build/multi_robot_challenge_23/prefix_override:/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/rocotics/DAT160_semester_oppgave/build/multi_robot_challenge_23/build
+[0.906s] Invoking command in '/home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/src': PYTHONPATH=/home/rocotics/DAT160_semester_oppgave/build/multi_robot_challenge_23/prefix_override:/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/multi_robot_challenge_23 build --build-base /home/rocotics/DAT160_semester_oppgave/build/multi_robot_challenge_23/build install --record /home/rocotics/DAT160_semester_oppgave/build/multi_robot_challenge_23/install.log --install-scripts $base/lib/multi_robot_challenge_23 --single-version-externally-managed
+[1.085s] running egg_info
+[1.086s] writing ../../build/multi_robot_challenge_23/multi_robot_challenge_23.egg-info/PKG-INFO
+[1.086s] writing dependency_links to ../../build/multi_robot_challenge_23/multi_robot_challenge_23.egg-info/dependency_links.txt
+[1.087s] writing entry points to ../../build/multi_robot_challenge_23/multi_robot_challenge_23.egg-info/entry_points.txt
+[1.088s] writing requirements to ../../build/multi_robot_challenge_23/multi_robot_challenge_23.egg-info/requires.txt
+[1.088s] writing top-level names to ../../build/multi_robot_challenge_23/multi_robot_challenge_23.egg-info/top_level.txt
+[1.111s] reading manifest file '../../build/multi_robot_challenge_23/multi_robot_challenge_23.egg-info/SOURCES.txt'
+[1.113s] writing manifest file '../../build/multi_robot_challenge_23/multi_robot_challenge_23.egg-info/SOURCES.txt'
+[1.113s] running build
+[1.113s] running build_py
+[1.114s] copying multi_robot_challenge_23/controller.py -> /home/rocotics/DAT160_semester_oppgave/build/multi_robot_challenge_23/build/lib/multi_robot_challenge_23
+[1.114s] running install
+[1.115s] running install_lib
+[1.116s] copying /home/rocotics/DAT160_semester_oppgave/build/multi_robot_challenge_23/build/lib/multi_robot_challenge_23/controller.py -> /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/python3.8/site-packages/multi_robot_challenge_23
+[1.117s] byte-compiling /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/python3.8/site-packages/multi_robot_challenge_23/controller.py to controller.cpython-38.pyc
+[1.119s] running install_data
+[1.120s] running install_egg_info
+[1.123s] removing '/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/python3.8/site-packages/multi_robot_challenge_23-0.0.0-py3.8.egg-info' (and everything under it)
+[1.123s] Copying ../../build/multi_robot_challenge_23/multi_robot_challenge_23.egg-info to /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/python3.8/site-packages/multi_robot_challenge_23-0.0.0-py3.8.egg-info
+[1.124s] running install_scripts
+[1.138s] Installing controller script to /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/multi_robot_challenge_23
+[1.139s] Installing leader script to /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/multi_robot_challenge_23
+[1.140s] Installing marker_recognition script to /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/multi_robot_challenge_23
+[1.140s] Installing robot_handler script to /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/multi_robot_challenge_23
+[1.141s] writing list of installed files to '/home/rocotics/DAT160_semester_oppgave/build/multi_robot_challenge_23/install.log'
+[1.161s] Invoked command in '/home/rocotics/DAT160_semester_oppgave/multi_robot_challenge_23/src' returned '0': PYTHONPATH=/home/rocotics/DAT160_semester_oppgave/build/multi_robot_challenge_23/prefix_override:/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/multi_robot_challenge_23 build --build-base /home/rocotics/DAT160_semester_oppgave/build/multi_robot_challenge_23/build install --record /home/rocotics/DAT160_semester_oppgave/build/multi_robot_challenge_23/install.log --install-scripts $base/lib/multi_robot_challenge_23 --single-version-externally-managed
