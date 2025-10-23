@@ -26,7 +26,11 @@ maps/map_dat160_w4.yaml
 maps/map_dat160_w5.png
 maps/map_dat160_w5.yaml
 multi_robot_challenge_23/__init__.py
-multi_robot_challenge_23/controller.py
+multi_robot_challenge_23/bug2_controller.py
+multi_robot_challenge_23/go_to_point.py
+multi_robot_challenge_23/marker_recognition.py
+multi_robot_challenge_23/poi_gen.py
+multi_robot_challenge_23/wall_follower.py
 resource/multi_robot_challenge_23
 rviz/model.rviz
 test/test_copyright.py

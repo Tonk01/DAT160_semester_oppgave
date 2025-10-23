@@ -1,0 +1,1 @@
+/home/rocotics/DAT160_semester_oppgave/build/bug2_interface/rosidl_generator_cpp/bug2_interface/msg/rosidl_generator_cpp__visibility_control.hpp

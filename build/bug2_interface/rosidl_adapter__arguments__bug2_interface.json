@@ -1,0 +1,6 @@
+{
+  "package_name": "bug2_interface",
+  "non_idl_tuples": [
+    "/home/rocotics/DAT160_semester_oppgave/bug2_interface:srv/GoToPoint.srv"
+  ]
+}

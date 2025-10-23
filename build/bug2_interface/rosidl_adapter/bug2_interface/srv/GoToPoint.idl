@@ -1,0 +1,18 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from bug2_interface/srv/GoToPoint.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+
+module bug2_interface {
+  module srv {
+    struct GoToPoint_Request {
+      boolean move_switch;
+
+      geometry_msgs::msg::Point target_position;
+    };
+    struct GoToPoint_Response {
+      boolean success;
+    };
+  };
+};

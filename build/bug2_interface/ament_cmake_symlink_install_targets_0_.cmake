@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/rocotics/DAT160_semester_oppgave/build/bug2_interface/libbug2_interface__rosidl_typesupport_fastrtps_c.so" "TARGETS" "bug2_interface__rosidl_typesupport_fastrtps_c" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

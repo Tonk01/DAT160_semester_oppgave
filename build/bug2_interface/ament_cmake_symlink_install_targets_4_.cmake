@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/rocotics/DAT160_semester_oppgave/build/bug2_interface/rosidl_generator_py/bug2_interface/bug2_interface_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" "TARGETS" "bug2_interface__rosidl_typesupport_c__pyext" "DESTINATION" "lib/python3.8/site-packages/bug2_interface")

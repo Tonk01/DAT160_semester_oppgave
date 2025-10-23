@@ -1,0 +1,1 @@
+/home/rocotics/DAT160_semester_oppgave/build/bug2_interface/ament_cmake_core/bug2_interfaceConfig-version.cmake

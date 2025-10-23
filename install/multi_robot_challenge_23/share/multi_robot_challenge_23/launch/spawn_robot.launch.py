@@ -36,6 +36,15 @@ def generate_launch_description():
         'namespace',
         default_value='tb3_5'
     )
+
+    use_sim_time_arg = DeclareLaunchArgument(
+        'use_sim_time',
+        default_value='true',
+        description='Use simulation (Gazebo) clock if true'
+    )
+
+    use_sim_time = LaunchConfiguration('use_sim_time')
+
     robot_x_pos_arg = DeclareLaunchArgument(
         'x',
         default_value='0.0'
@@ -103,8 +112,56 @@ def generate_launch_description():
         }.items()
     )
 
+    topic_remaps = [
+        ('/scan', 'scan'),
+        ('/odom', 'odom'),
+        ('/cmd_vel', 'cmd_vel'),
+        ('/bug2/mline', 'bug2/mline'),
+    ]
+    
+    service_remaps = [
+        ('/go_to_point/switch', 'go_to_point/switch'),
+        ('/wall_follower/switch', 'wall_follower/switch')
+    ]
+    
+    wall_follower = Node(
+        package='multi_robot_challenge_23', 
+        executable='wall_follower',
+        namespace=namespace,
+        output='screen',
+        remappings=topic_remaps + service_remaps,
+        parameters=[{'use_sim_time': use_sim_time}],
+    )
+
+    go_to_point = Node(
+        package='multi_robot_challenge_23',
+        executable='go_to_point',
+        namespace=namespace,
+        output='screen',
+        remappings=topic_remaps + service_remaps,
+        parameters=[{'use_sim_time': use_sim_time}],
+    )
+
+    bug2_controller = Node(
+        package='multi_robot_challenge_23',
+        executable='bug2_controller',
+        namespace=namespace,
+        output='screen',
+        remappings=topic_remaps + service_remaps,
+        parameters=[{'use_sim_time': use_sim_time}],
+    )
+
+    poi_gen = Node(
+        package='multi_robot_challenge_23',
+        executable='poi_gen',
+        namespace=namespace,
+        output='screen',
+        parameters=[{'spacing': 5.0, 'free_threshold': 50, 'skip_unkn': True}],
+    )
+
     return LaunchDescription([
         namespace_launch_arg,
+        use_sim_time_arg,
         robot_description_arg,
         robot_x_pos_arg,
         robot_y_pos_arg,
@@ -113,4 +170,8 @@ def generate_launch_description():
         spawn_entity,
         tf_map_to_odom,
         aruco_recognition,
+        wall_follower,
+        go_to_point,
+        bug2_controller,
+        poi_gen,
     ])

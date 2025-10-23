@@ -1,0 +1,27 @@
+running develop
+running egg_info
+writing ../../build/multi_robot_challenge_23/multi_robot_challenge_23.egg-info/PKG-INFO
+writing dependency_links to ../../build/multi_robot_challenge_23/multi_robot_challenge_23.egg-info/dependency_links.txt
+writing entry points to ../../build/multi_robot_challenge_23/multi_robot_challenge_23.egg-info/entry_points.txt
+writing requirements to ../../build/multi_robot_challenge_23/multi_robot_challenge_23.egg-info/requires.txt
+writing top-level names to ../../build/multi_robot_challenge_23/multi_robot_challenge_23.egg-info/top_level.txt
+reading manifest file '../../build/multi_robot_challenge_23/multi_robot_challenge_23.egg-info/SOURCES.txt'
+writing manifest file '../../build/multi_robot_challenge_23/multi_robot_challenge_23.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+copying launch/rescue_robots_w1.launch.py -> /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/launch
+running install_egg_info
+removing '/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/python3.8/site-packages/multi_robot_challenge_23-0.0.0-py3.8.egg-info' (and everything under it)
+Copying ../../build/multi_robot_challenge_23/multi_robot_challenge_23.egg-info to /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/python3.8/site-packages/multi_robot_challenge_23-0.0.0-py3.8.egg-info
+running install_scripts
+Installing bug2_controller script to /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/multi_robot_challenge_23
+Installing go_to_point script to /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/multi_robot_challenge_23
+Installing leader script to /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/multi_robot_challenge_23
+Installing poi_gen script to /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/multi_robot_challenge_23
+Installing robot_handler script to /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/multi_robot_challenge_23
+Installing wall_follower script to /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/multi_robot_challenge_23
+Installing wp_dispatcher script to /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/multi_robot_challenge_23
+writing list of installed files to '/home/rocotics/DAT160_semester_oppgave/build/multi_robot_challenge_23/install.log'

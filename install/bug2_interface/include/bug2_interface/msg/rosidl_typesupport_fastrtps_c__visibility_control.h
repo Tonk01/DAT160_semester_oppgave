@@ -1,0 +1,1 @@
+/home/rocotics/DAT160_semester_oppgave/build/bug2_interface/rosidl_typesupport_fastrtps_c/bug2_interface/msg/rosidl_typesupport_fastrtps_c__visibility_control.h

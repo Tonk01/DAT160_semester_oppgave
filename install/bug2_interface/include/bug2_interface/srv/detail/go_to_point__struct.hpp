@@ -1,0 +1,1 @@
+/home/rocotics/DAT160_semester_oppgave/build/bug2_interface/rosidl_generator_cpp/bug2_interface/srv/detail/go_to_point__struct.hpp

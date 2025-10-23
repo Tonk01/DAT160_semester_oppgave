@@ -1,0 +1,1 @@
+/home/rocotics/DAT160_semester_oppgave/build/bug2_interface/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake

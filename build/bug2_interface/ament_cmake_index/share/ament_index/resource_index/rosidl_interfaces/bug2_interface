@@ -1,0 +1,4 @@
+srv/GoToPoint.idl
+srv/GoToPoint.srv
+srv/GoToPoint_Request.msg
+srv/GoToPoint_Response.msg

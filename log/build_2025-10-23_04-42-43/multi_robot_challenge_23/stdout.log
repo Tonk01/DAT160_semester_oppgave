@@ -1,0 +1,59 @@
+running develop
+running egg_info
+creating multi_robot_challenge_23.egg-info
+writing multi_robot_challenge_23.egg-info/PKG-INFO
+writing dependency_links to multi_robot_challenge_23.egg-info/dependency_links.txt
+writing entry points to multi_robot_challenge_23.egg-info/entry_points.txt
+writing requirements to multi_robot_challenge_23.egg-info/requires.txt
+writing top-level names to multi_robot_challenge_23.egg-info/top_level.txt
+writing manifest file 'multi_robot_challenge_23.egg-info/SOURCES.txt'
+reading manifest file 'multi_robot_challenge_23.egg-info/SOURCES.txt'
+writing manifest file 'multi_robot_challenge_23.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/python3.8/site-packages/site.py
+Creating /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/python3.8/site-packages/multi-robot-challenge-23.egg-link (link to .)
+Installing bug2_controller script to /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/multi_robot_challenge_23
+Installing go_to_point script to /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/multi_robot_challenge_23
+Installing leader script to /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/multi_robot_challenge_23
+Installing poi_gen script to /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/multi_robot_challenge_23
+Installing robot_handler script to /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/multi_robot_challenge_23
+Installing wall_follower script to /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/lib/multi_robot_challenge_23
+
+Installed /home/rocotics/DAT160_semester_oppgave/build/multi_robot_challenge_23
+running install_data
+creating /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/ament_index
+creating /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/ament_index/resource_index
+creating /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/ament_index/resource_index/packages
+copying resource/multi_robot_challenge_23 -> /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/ament_index/resource_index/packages
+copying package.xml -> /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23
+creating /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/launch
+copying launch/rescue_robots_w1.launch.py -> /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/launch
+copying launch/spawn_robot.launch.py -> /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/launch
+copying launch/rescue_robots_w5.launch.py -> /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/launch
+copying launch/rescue_robots_w2.launch.py -> /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/launch
+copying launch/rescue_robots_w4.launch.py -> /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/launch
+copying launch/rescue_robots_w3.launch.py -> /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/launch
+copying launch/aruco_recognition.launch.py -> /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/launch
+creating /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/worlds
+copying worlds/dat160_w5.world -> /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/worlds
+copying worlds/dat160_w2.world -> /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/worlds
+copying worlds/dat160_w1.world -> /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/worlds
+copying worlds/dat160_w3.world -> /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/worlds
+copying worlds/dat160_w4.world -> /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/worlds
+creating /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/rviz
+copying rviz/model.rviz -> /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/rviz
+creating /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/urdf
+copying urdf/turtlebot3_waffle_pi.gazebo.xacro -> /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/urdf
+copying urdf/turtlebot3_waffle_pi.urdf.xacro -> /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/urdf
+copying urdf/common_properties.xacro -> /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/urdf
+creating /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/maps
+copying maps/map_dat160_w4.yaml -> /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/maps
+copying maps/map_dat160_w5.yaml -> /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/maps
+copying maps/map_dat160_w3.yaml -> /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/maps
+copying maps/map_dat160_w1.png -> /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/maps
+copying maps/map_dat160_w4.png -> /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/maps
+copying maps/map_dat160_w2.yaml -> /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/maps
+copying maps/map_dat160_w2.png -> /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/maps
+copying maps/map_dat160_w1.yaml -> /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/maps
+copying maps/map_dat160_w5.png -> /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/maps
+copying maps/map_dat160_w3.png -> /home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23/share/multi_robot_challenge_23/maps
