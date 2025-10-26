@@ -14,12 +14,12 @@ class WallFollower(Node):
 
         # topics
         self.scan_sub = self.create_subscription(LaserScan, 
-            '/scan', 
+            'scan', 
             self.clbk_scan, 
             10
             )
         
-        self.cmd_pub  = self.create_publisher(Twist, '/cmd_vel', 10)
+        self.cmd_pub  = self.create_publisher(Twist, 'cmd_vel', 10)
 
         self.enabled = False
         self.srv_switch = self.create_service(SetBool, 'wall_follower/switch', self.on_switch)
@@ -126,10 +126,6 @@ class WallFollower(Node):
 
         deg = np.deg2rad
         front = np.abs(ang - 0.0) <= deg(5)
-
-        # unused. 
-        left = np.abs(ang - np.pi/ 2) <= deg(10)
-        right = np.abs(ang + np.pi / 2) <= deg(10)
 
         front_min = float(np.min(r[front])) if np.any(front) else float('inf')
         self.last_front = front_min

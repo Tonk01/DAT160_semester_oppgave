@@ -12,6 +12,7 @@ from std_msgs.msg import Bool
 
 from visualization_msgs.msg import Marker
 from builtin_interfaces.msg import Duration
+from rclpy.qos import QoSProfile, ReliabilityPolicy, DurabilityPolicy
 
 class Bug2Controller(Node):
     def __init__(self):
@@ -21,9 +22,15 @@ class Bug2Controller(Node):
         self.wall_cli = self.create_client(SetBool, 'wall_follower/switch')
         self.goto_cli = self.create_client(Gpsrv, 'go_to_point/switch')
 
+        qos_goal = QoSProfile(
+            depth = 1,
+            reliability = ReliabilityPolicy.RELIABLE,
+            durability = DurabilityPolicy.TRANSIENT_LOCAL
+        )
+
         # topics
         self.goal_reached_pub = self.create_publisher(Bool, 'bug2/goal_reached', 10)
-        self.goal_sub = self.create_subscription(Point, 'bug2/next_goal', self.on_next_goal, 10)
+        self.goal_sub = self.create_subscription(Point, 'bug2/next_goal', self.on_next_goal, qos_goal)
         self.marker_pub = self.create_publisher(Marker, 'bug2/mline', 10)
 
         self.declare_parameter('goal_tol', 0.08)

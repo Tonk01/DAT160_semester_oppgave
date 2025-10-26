@@ -61,6 +61,14 @@ def generate_launch_description():
                     {'node_names': ["map_server"]}]
     )
 
+    poi_gen = Node(
+        package='multi_robot_challenge_23',
+        executable='poi_gen',
+        name='poi_gen',
+        output='screen',
+        parameters=[{'spacing': 5.0, 'free_threshold': 50, 'skip_unkn': True}],
+    )
+
     # Spawning the first robot
     tb3_0 = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(get_package_share_directory(package_name), 'launch'), '/spawn_robot.launch.py']),
@@ -98,6 +106,7 @@ def generate_launch_description():
         gazebo,
         map_server,
         lifecycle_manager,
+        poi_gen,
         tb3_0,
         tb3_1,
         rviz_node,

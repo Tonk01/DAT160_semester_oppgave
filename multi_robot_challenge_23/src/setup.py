@@ -27,7 +27,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            #'marker_recognition = multi_robot_challenge_23.marker_pose:main',
+            #'marker_recognition = multi_robot_challenge_23.marker_recognition:main',
             'robot_handler = multi_robot_challenge_23.robot_handler:main',
             'leader = multi_robot_challenge_23.leader:main',
             'wall_follower =  multi_robot_challenge_23.wall_follower:main',

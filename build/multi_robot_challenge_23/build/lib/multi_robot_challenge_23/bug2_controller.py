@@ -18,16 +18,16 @@ class Bug2Controller(Node):
         super().__init__('bug2_controller')
 
         # service clients
-        self.wall_cli = self.create_client(SetBool, '/wall_follower/switch')
-        self.goto_cli = self.create_client(Gpsrv, '/go_to_point/switch')
+        self.wall_cli = self.create_client(SetBool, 'wall_follower/switch')
+        self.goto_cli = self.create_client(Gpsrv, 'go_to_point/switch')
 
         # topics
         self.goal_reached_pub = self.create_publisher(Bool, 'bug2/goal_reached', 10)
         self.goal_sub = self.create_subscription(Point, 'bug2/next_goal', self.on_next_goal, 10)
-        self.marker_pub = self.create_publisher(Marker, '/bug2/mline', 10)
+        self.marker_pub = self.create_publisher(Marker, 'bug2/mline', 10)
 
         self.declare_parameter('goal_tol', 0.08)
-        self.declare_parameter('block_threshhold', 0.56)
+        self.declare_parameter('block_threshold', 0.56)
         self.declare_parameter('eps_line', 0.05)
 
         self.x = None
@@ -50,8 +50,8 @@ class Bug2Controller(Node):
         self.goal_tol = 0.08
 
         # subs
-        self.create_subscription(Odometry, '/odom', self.odom_clbk, 20)
-        self.create_subscription(LaserScan, '/scan', self.scan_clbk, 10)
+        self.create_subscription(Odometry, 'odom', self.odom_clbk, 20)
+        self.create_subscription(LaserScan, 'scan', self.scan_clbk, 10)
 
         # timer
         self.create_timer(0.2, self.tick)

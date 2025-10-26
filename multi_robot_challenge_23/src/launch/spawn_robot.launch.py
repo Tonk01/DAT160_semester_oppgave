@@ -10,7 +10,6 @@ from launch_ros.parameter_descriptions import ParameterValue
 
 import xacro
 
-
 # Name of the package that conatins the robot description xacro file
 package_name_robot = 'multi_robot_challenge_23'
 
@@ -138,13 +137,13 @@ def generate_launch_description():
         parameters=[{'use_sim_time': use_sim_time}],
     )
 
-    poi_gen = Node(
-        package='multi_robot_challenge_23',
-        executable='poi_gen',
-        namespace=namespace,
-        output='screen',
-        parameters=[{'spacing': 5.0, 'free_threshold': 50, 'skip_unkn': True}],
-    )
+    #poi_gen = Node(
+        #package='multi_robot_challenge_23',
+        #executable='poi_gen',
+        #namespace=namespace,
+        #output='screen',
+        #parameters=[{'spacing': 5.0, 'free_threshold': 50, 'skip_unkn': True}],
+    #)
 
     return LaunchDescription([
         namespace_launch_arg,
@@ -160,5 +159,5 @@ def generate_launch_description():
         wall_follower,
         go_to_point,
         bug2_controller,
-        poi_gen,
+        #poi_gen,
     ])

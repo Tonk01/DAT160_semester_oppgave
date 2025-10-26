@@ -1,0 +1,122 @@
+[0.046s] Invoking command in '/home/rocotics/DAT160_semester_oppgave/build/bug2_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23:/home/rocotics/ros2_ws/install/ros2_aruco:/home/rocotics/ros2_ws/install/robot_vision:/home/rocotics/ros2_ws/install/robot_ml:/home/rocotics/ros2_ws/install/my_robot_pkg:/home/rocotics/ros2_ws/install/my_package:/home/rocotics/ros2_ws/install/bug2_navigation:/home/rocotics/ros2_ws/install/braitenberg_vehicle:/opt/ros/foxy /usr/bin/cmake /home/rocotics/DAT160_semester_oppgave/bug2_interface -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rocotics/DAT160_semester_oppgave/install/bug2_interface
+[0.060s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.060s] -- Found ament_cmake_core: 0.9.12 (/opt/ros/foxy/share/ament_cmake_core/cmake)
+[0.098s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.098s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.274s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.274s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.277s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.403s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.425s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[0.480s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.579s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[0.691s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[0.919s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.012s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.050s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[1.050s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[1.084s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.084s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[1.084s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[1.148s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.150s] -- Added test 'lint_cmake' to check CMake code style
+[1.151s] -- Added test 'xmllint' to check XML markup files
+[1.157s] -- Configuring done
+[1.211s] -- Generating done
+[1.214s] -- Build files have been written to: /home/rocotics/DAT160_semester_oppgave/build/bug2_interface
+[1.221s] Invoked command in '/home/rocotics/DAT160_semester_oppgave/build/bug2_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23:/home/rocotics/ros2_ws/install/ros2_aruco:/home/rocotics/ros2_ws/install/robot_vision:/home/rocotics/ros2_ws/install/robot_ml:/home/rocotics/ros2_ws/install/my_robot_pkg:/home/rocotics/ros2_ws/install/my_package:/home/rocotics/ros2_ws/install/bug2_navigation:/home/rocotics/ros2_ws/install/braitenberg_vehicle:/opt/ros/foxy /usr/bin/cmake /home/rocotics/DAT160_semester_oppgave/bug2_interface -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rocotics/DAT160_semester_oppgave/install/bug2_interface
+[1.224s] Invoking command in '/home/rocotics/DAT160_semester_oppgave/build/bug2_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23:/home/rocotics/ros2_ws/install/ros2_aruco:/home/rocotics/ros2_ws/install/robot_vision:/home/rocotics/ros2_ws/install/robot_ml:/home/rocotics/ros2_ws/install/my_robot_pkg:/home/rocotics/ros2_ws/install/my_package:/home/rocotics/ros2_ws/install/bug2_navigation:/home/rocotics/ros2_ws/install/braitenberg_vehicle:/opt/ros/foxy /usr/bin/cmake --build /home/rocotics/DAT160_semester_oppgave/build/bug2_interface -- -j4 -l4
+[1.281s] [  3%] Built target bug2_interface__cpp
+[1.281s] [ 12%] Built target bug2_interface__rosidl_generator_c
+[1.318s] [ 22%] Built target bug2_interface__rosidl_typesupport_introspection_c
+[1.327s] [ 32%] Built target bug2_interface__rosidl_typesupport_c
+[1.327s] [ 41%] Built target bug2_interface__rosidl_typesupport_cpp
+[1.331s] [ 51%] Built target bug2_interface__rosidl_typesupport_fastrtps_cpp
+[1.367s] [ 61%] Built target bug2_interface__rosidl_typesupport_fastrtps_c
+[1.373s] [ 70%] Built target bug2_interface__rosidl_typesupport_introspection_cpp
+[1.395s] [ 70%] Built target bug2_interface
+[1.420s] [ 74%] Built target bug2_interface__py
+[1.456s] [ 80%] Built target bug2_interface__python
+[1.492s] [ 93%] Built target bug2_interface__rosidl_typesupport_c__pyext
+[1.492s] [ 93%] Built target bug2_interface__rosidl_typesupport_fastrtps_c__pyext
+[1.493s] [100%] Built target bug2_interface__rosidl_typesupport_introspection_c__pyext
+[1.506s] Invoked command in '/home/rocotics/DAT160_semester_oppgave/build/bug2_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23:/home/rocotics/ros2_ws/install/ros2_aruco:/home/rocotics/ros2_ws/install/robot_vision:/home/rocotics/ros2_ws/install/robot_ml:/home/rocotics/ros2_ws/install/my_robot_pkg:/home/rocotics/ros2_ws/install/my_package:/home/rocotics/ros2_ws/install/bug2_navigation:/home/rocotics/ros2_ws/install/braitenberg_vehicle:/opt/ros/foxy /usr/bin/cmake --build /home/rocotics/DAT160_semester_oppgave/build/bug2_interface -- -j4 -l4
+[1.590s] Invoking command in '/home/rocotics/DAT160_semester_oppgave/build/bug2_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23:/home/rocotics/ros2_ws/install/ros2_aruco:/home/rocotics/ros2_ws/install/robot_vision:/home/rocotics/ros2_ws/install/robot_ml:/home/rocotics/ros2_ws/install/my_robot_pkg:/home/rocotics/ros2_ws/install/my_package:/home/rocotics/ros2_ws/install/bug2_navigation:/home/rocotics/ros2_ws/install/braitenberg_vehicle:/opt/ros/foxy /usr/bin/cmake --install /home/rocotics/DAT160_semester_oppgave/build/bug2_interface
+[1.601s] -- Install configuration: ""
+[1.601s] -- Execute custom install script
+[1.602s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/ament_index/resource_index/rosidl_interfaces/bug2_interface
+[1.602s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/include/bug2_interface/msg/rosidl_generator_c__visibility_control.h
+[1.602s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/include/bug2_interface/srv/detail/go_to_point__functions.h
+[1.603s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/include/bug2_interface/srv/detail/go_to_point__struct.h
+[1.603s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/include/bug2_interface/srv/detail/go_to_point__type_support.h
+[1.603s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/include/bug2_interface/srv/go_to_point.h
+[1.603s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/environment/library_path.sh
+[1.603s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/environment/library_path.dsv
+[1.604s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/include/bug2_interface/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.604s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/include/bug2_interface/srv/detail/go_to_point__rosidl_typesupport_fastrtps_c.h
+[1.605s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/lib/libbug2_interface__rosidl_typesupport_fastrtps_c.so
+[1.605s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/include/bug2_interface/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.605s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/include/bug2_interface/srv/detail/go_to_point__rosidl_typesupport_fastrtps_cpp.hpp
+[1.606s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/lib/libbug2_interface__rosidl_typesupport_fastrtps_cpp.so
+[1.607s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/include/bug2_interface/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.607s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/include/bug2_interface/srv/detail/go_to_point__rosidl_typesupport_introspection_c.h
+[1.607s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/include/bug2_interface/msg/rosidl_generator_cpp__visibility_control.hpp
+[1.608s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/include/bug2_interface/srv/detail/go_to_point__builder.hpp
+[1.608s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/include/bug2_interface/srv/detail/go_to_point__struct.hpp
+[1.608s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/include/bug2_interface/srv/detail/go_to_point__traits.hpp
+[1.608s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/include/bug2_interface/srv/detail/go_to_point__type_support.hpp
+[1.608s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/include/bug2_interface/srv/go_to_point.hpp
+[1.609s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/include/bug2_interface/srv/detail/go_to_point__rosidl_typesupport_introspection_cpp.hpp
+[1.609s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/environment/pythonpath.sh
+[1.609s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/environment/pythonpath.dsv
+[1.609s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/lib/python3.8/site-packages/bug2_interface/__init__.py
+[1.610s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/lib/python3.8/site-packages/bug2_interface/srv/__init__.py
+[1.610s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/lib/python3.8/site-packages/bug2_interface/srv/_go_to_point.py
+[1.611s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/lib/python3.8/site-packages/bug2_interface/bug2_interface_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[1.611s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/lib/python3.8/site-packages/bug2_interface/bug2_interface_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[1.611s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/lib/python3.8/site-packages/bug2_interface/bug2_interface_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[1.612s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/lib/libbug2_interface__python.so
+[1.612s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/srv/GoToPoint.idl
+[1.612s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/srv/GoToPoint.srv
+[1.614s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/srv/GoToPoint_Request.msg
+[1.614s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/srv/GoToPoint_Response.msg
+[1.614s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/ament_index/resource_index/package_run_dependencies/bug2_interface
+[1.614s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/ament_index/resource_index/parent_prefix_path/bug2_interface
+[1.615s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/environment/ament_prefix_path.sh
+[1.615s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/environment/ament_prefix_path.dsv
+[1.615s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/environment/path.sh
+[1.615s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/environment/path.dsv
+[1.616s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/local_setup.bash
+[1.616s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/local_setup.sh
+[1.616s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/local_setup.zsh
+[1.616s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/local_setup.dsv
+[1.616s] -- Symlinking: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/package.dsv
+[1.633s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/ament_index/resource_index/packages/bug2_interface
+[1.633s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/cmake/rosidl_cmake-extras.cmake
+[1.633s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.634s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/cmake/ament_cmake_export_libraries-extras.cmake
+[1.634s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/cmake/ament_cmake_export_targets-extras.cmake
+[1.634s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.635s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[1.635s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[1.635s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/cmake/bug2_interfaceConfig.cmake
+[1.635s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/cmake/bug2_interfaceConfig-version.cmake
+[1.635s] -- Up-to-date symlink: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/package.xml
+[1.636s] -- Up-to-date: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/lib/libbug2_interface__rosidl_generator_c.so
+[1.636s] -- Up-to-date: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/lib/libbug2_interface__rosidl_typesupport_introspection_c.so
+[1.637s] -- Up-to-date: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/lib/libbug2_interface__rosidl_typesupport_c.so
+[1.638s] -- Up-to-date: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/lib/libbug2_interface__rosidl_typesupport_introspection_cpp.so
+[1.638s] -- Up-to-date: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/lib/libbug2_interface__rosidl_typesupport_cpp.so
+[1.678s] Compiling '/home/rocotics/DAT160_semester_oppgave/install/bug2_interface/lib/python3.8/site-packages/bug2_interface/__init__.py'...
+[1.681s] -- Up-to-date: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/cmake/bug2_interface__rosidl_generator_cExport.cmake
+[1.681s] -- Installing: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/cmake/bug2_interface__rosidl_generator_cExport-noconfig.cmake
+[1.682s] -- Up-to-date: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/cmake/bug2_interface__rosidl_typesupport_introspection_cExport.cmake
+[1.682s] -- Installing: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/cmake/bug2_interface__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[1.682s] -- Up-to-date: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/cmake/bug2_interface__rosidl_typesupport_cExport.cmake
+[1.682s] -- Installing: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/cmake/bug2_interface__rosidl_typesupport_cExport-noconfig.cmake
+[1.682s] -- Up-to-date: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/cmake/bug2_interface__rosidl_generator_cppExport.cmake
+[1.682s] -- Up-to-date: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/cmake/bug2_interface__rosidl_typesupport_introspection_cppExport.cmake
+[1.683s] -- Installing: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/cmake/bug2_interface__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[1.683s] -- Up-to-date: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/cmake/bug2_interface__rosidl_typesupport_cppExport.cmake
+[1.683s] -- Installing: /home/rocotics/DAT160_semester_oppgave/install/bug2_interface/share/bug2_interface/cmake/bug2_interface__rosidl_typesupport_cppExport-noconfig.cmake
+[1.693s] Invoked command in '/home/rocotics/DAT160_semester_oppgave/build/bug2_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rocotics/DAT160_semester_oppgave/install/multi_robot_challenge_23:/home/rocotics/ros2_ws/install/ros2_aruco:/home/rocotics/ros2_ws/install/robot_vision:/home/rocotics/ros2_ws/install/robot_ml:/home/rocotics/ros2_ws/install/my_robot_pkg:/home/rocotics/ros2_ws/install/my_package:/home/rocotics/ros2_ws/install/bug2_navigation:/home/rocotics/ros2_ws/install/braitenberg_vehicle:/opt/ros/foxy /usr/bin/cmake --install /home/rocotics/DAT160_semester_oppgave/build/bug2_interface

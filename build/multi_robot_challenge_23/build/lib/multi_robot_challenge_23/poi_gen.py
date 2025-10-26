@@ -26,16 +26,35 @@ class PoiGen(Node):
             durability = DurabilityPolicy.TRANSIENT_LOCAL
         )
 
+        qos_goal = QoSProfile(
+            depth = 1,
+            reliability = ReliabilityPolicy.RELIABLE,
+            durability = DurabilityPolicy.TRANSIENT_LOCAL
+        )
+
         # topics (pubs & subs)
         self.goal_pub = self.create_publisher(Point, 'bug2/next_goal', 10)
 
-        self.reached_sub = self.create_subscription(Bool, 'bug2/goal_reached', self.on_reached, 10)
+        self.goal_pub_0 = self.create_publisher(Point, '/tb3_0/bug2/next_goal', qos_goal)
+        self.goal_pub_1 = self.create_publisher(Point, '/tb3_1/bug2/next_goal', qos_goal)
+
+        self.reached_sub = self.create_subscription(Bool, 'bug2/goal_reached', self.on_reached, 10) # <-- unsued for this
+        self.reached_sub_0 = self.create_subscription(Bool, '/tb3_0/bug2/goal_reached', self.on_reached_0, 10)
+        self.reached_sub_1 = self.create_subscription(Bool, '/tb3_1/bug2/goal_reached', self.on_reached_1, 10)
+        
         self.map_sub = self.create_subscription(OccupancyGrid, '/map', self.on_map, map_qos)
 
         self.grid = None
         self.seq = []
         self.idx = 0
         self.waiting_ack = False
+
+        self.seq0 = []
+        self.seq1 = []
+        self.idx0 = 0
+        self.idx1 = 0
+        self.waiting_ack0 = False
+        self.waiting_ack1 = False
 
         # period tick to re-send current goal
         self.create_timer(0.5, self.tick)
@@ -46,33 +65,62 @@ class PoiGen(Node):
         self.seq = self.make_waypoints(msg)
         self.get_logger().info(f"[poi_gen] map received: {msg.info.width}x{msg.info.height} @ {msg.info.resolution:.3f} m/px; waypoints={len(self.seq)}; spacing={self.spacing:.2f}")
 
+        # split the generated waypoints, first half -> tb3_0, second half -> tb3_1
+        half = len(self.seq) // 2
+        self.seq0 = self.seq[:half]
+        self.seq1 = self.seq[half:]
+
         self.idx = 0
         self.waiting_ack = False
 
-    # callback when robot reports it has reached the goal
+        self.idx0 = 0
+        self.idx1 = 0
+        self.waiting_ack0 = False
+        self.waiting_ack1 = False
+
+        self.get_logger().info(f"[poi_gen] split:  tb3_0={len(self.seq0)} waypoints, tb3_1={len(self.seq1)} waypoints")
+
+    # callback when robot reports it has reached the goal <-- unused for now. 
     def on_reached(self, msg: Bool):
         if msg.data and self.idx < len(self.seq):
             self.get_logger().info(f"[poi_gen] waypoint {self.idx+1} reached; advancing")
             self.idx += 1
             self.waiting_ack = False
 
+    # tb3_0 ack
+    def on_reached_0(self, msg: Bool):
+        if msg.data and self.idx0 < len(self.seq0):
+            self.get_logger().info(f"[poi_gen] tb3_0 waypoint {self.idx0+1} reached; advancing")
+            self.idx0 += 1
+            self.waiting_ack0 = False
+
+    # tb3_1 ack
+    def on_reached_1(self, msg: Bool):
+        if msg.data and self.idx1 < len(self.seq1):
+            self.get_logger().info(f"[poi_gen] tb3_1 waypoint {self.idx1+1} reached; advancing")
+            self.idx1 += 1
+            self.waiting_ack1 = False
+
     # periodic tick, sending one goal at a time
     def tick(self):
         if self.grid is None:
             return
             
-        if self.idx >= len(self.seq):
-            return
-            
-        if self.waiting_ack:
-            return
-            
-        p = self.seq[self.idx]
-        self.get_logger().info(f"[poi_gen] sending waypoint {self.idx+1}/{len(self.seq)} -> (x={p.x:.2f}, y={p.y:.2f}) in odom")
+        # tb3_0
+        if self.idx0 < len(self.seq0) and not self.waiting_ack0:
+            p0 = self.seq0[self.idx0]
+            self.get_logger().info(f"[poi_gen] tb3_0 sending waypoint {self.idx0+1}/{len(self.seq0)} -> (x={p0.x:.2f}, y={p0.y:.2f}) in odom")
+            self.goal_pub_0.publish(p0)
+            self.waiting_ack0 = True
 
-        self.goal_pub.publish(p)
-        self.waiting_ack = True
-    
+        # tb3_1
+        if self.idx1 < len(self.seq1) and not self.waiting_ack1:
+            p1 = self.seq1[self.idx1]
+            self.get_logger().info(f"[poi_gen] tb3_1 sending waypoint {self.idx1+1}/{len(self.seq1)} -> (x={p1.x:.2f}, y={p1.y:.2f}) in odom")
+            self.goal_pub_1.publish(p1)
+            self.waiting_ack1 = True
+
+
     # generates waypoints from the occupancy grid
     def make_waypoints(self, m: OccupancyGrid):
         res = m.info.resolution
