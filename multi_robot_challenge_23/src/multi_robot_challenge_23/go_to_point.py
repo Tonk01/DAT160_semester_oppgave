@@ -19,13 +19,13 @@ class GoToPoint(Node):
 
         self.odom_sub = self.create_subscription(
             Odometry,
-            '/odom',
+            'odom',
             self.clbk_odom,
             20
         )
 
-        self.cmd_pub = self.create_publisher(Twist, '/cmd_vel', 10)
-        self.srv = self.create_service(Gpsrv, '/go_to_point/switch', self.srv_clbk)
+        self.cmd_pub = self.create_publisher(Twist, 'cmd_vel', 10)
+        self.srv = self.create_service(Gpsrv, 'go_to_point/switch', self.srv_clbk)
 
         self.position = None
         self.yaw = None 

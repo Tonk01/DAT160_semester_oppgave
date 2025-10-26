@@ -37,7 +37,7 @@ class PoiGen(Node):
         self.idx = 0
         self.waiting_ack = False
 
-        # period tick to re-send current goal (might not be needed)
+        # period tick to re-send current goal
         self.create_timer(0.5, self.tick)
 
     # map callback, builds all waypoints once the map is received

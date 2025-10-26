@@ -111,25 +111,14 @@ def generate_launch_description():
             'namespace': namespace,
         }.items()
     )
+    
+    # starts nodes on a spawned robot (all robots if there are more)
 
-    topic_remaps = [
-        ('/scan', 'scan'),
-        ('/odom', 'odom'),
-        ('/cmd_vel', 'cmd_vel'),
-        ('/bug2/mline', 'bug2/mline'),
-    ]
-    
-    service_remaps = [
-        ('/go_to_point/switch', 'go_to_point/switch'),
-        ('/wall_follower/switch', 'wall_follower/switch')
-    ]
-    
     wall_follower = Node(
         package='multi_robot_challenge_23', 
         executable='wall_follower',
         namespace=namespace,
         output='screen',
-        remappings=topic_remaps + service_remaps,
         parameters=[{'use_sim_time': use_sim_time}],
     )
 
@@ -138,7 +127,6 @@ def generate_launch_description():
         executable='go_to_point',
         namespace=namespace,
         output='screen',
-        remappings=topic_remaps + service_remaps,
         parameters=[{'use_sim_time': use_sim_time}],
     )
 
@@ -147,7 +135,6 @@ def generate_launch_description():
         executable='bug2_controller',
         namespace=namespace,
         output='screen',
-        remappings=topic_remaps + service_remaps,
         parameters=[{'use_sim_time': use_sim_time}],
     )
 
