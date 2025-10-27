@@ -28,10 +28,10 @@ class WallFollower(Node):
 
         # tuning
         deg = np.deg2rad
-        self.tol = deg(0.4)
-        self.tol_go = deg(0.6)
-        self.tol_stop = deg(7)
-        self.tol_move = deg(0.2)
+        self.tol = deg(2)
+        self.tol_go = deg(6)
+        self.tol_stop = deg(10)
+        self.tol_move = deg(3)
 
         # speeds
         self.k = 0.7
@@ -41,7 +41,7 @@ class WallFollower(Node):
 
         # distances
         self.approach_stop = 0.5
-        self.dist_safe = 0.35
+        self.dist_safe = 0.25
 
         # heading
         self.alpha = 0.8

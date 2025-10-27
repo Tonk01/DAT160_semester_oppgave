@@ -6,13 +6,14 @@ from rclpy.node import Node
 from nav_msgs.msg import OccupancyGrid
 from geometry_msgs.msg import Point
 from std_msgs.msg import Bool
+from collections import deque
 from rclpy.qos import QoSProfile, ReliabilityPolicy, DurabilityPolicy
 
 class PoiGen(Node):
     def __init__(self):
         super().__init__('poi_gen')
 
-        self.declare_parameter('spacing', 5.0)          # meters between waypoints
+        self.declare_parameter('spacing', 3.0)          # meters between waypoints
         self.declare_parameter('free_threshold', 50) 
         self.declare_parameter('skip_unkn', True)       # skips -1 (unknown cells)
 
@@ -130,31 +131,102 @@ class PoiGen(Node):
         oy = m.info.origin.position.y
         data = m.data
 
-        # stride in cells based on spacing
+        # Paramaters
+        free_thre = self.free_threshold
+        skip_unkn = self.skip_unkn
         step = max(1, int(math.floor(self.spacing / res)))
-        waypoints = []
+        inflate_m = getattr(self, "inflate_margin_m", 0.10)
+        inflate_px = max(0, int(round(inflate_m / res)))
+        
+        # small helpers
+        def idx(r, c): 
+            return r * width + c
+        
+        def is_free(v):
+            if v == -1:
+                return not skip_unkn
+            return v < free_thre
+        
+        # Build free mask
+        free = [False] * (width * height)
+        for r in range(height):
+            base = r * width
+            for c in range(width):
+                v = data[base + c]
+                free[base + c] = is_free(v)
 
-        # lawnmover algorithm for the map, choosing only free cells
+        if inflate_px > 0:
+            near_occ = [False] * (width * height)
+            
+            for r in range(height):
+                for c in range(width):
+                    if not free[idx(r, c)]:
+
+                        # mark neighbors within inflate_px as near occupied
+                        r0 = max(0, r - inflate_px)
+                        r1 = min(height - 1, r + inflate_px)
+
+                        c0 = max(0, c - inflate_px)
+                        c1 = min(width - 1, c + inflate_px)
+
+                        for rr in range(r0, r1 + 1):
+                            base = rr * width
+
+                            for cc in range(c0, c1 + 1):
+                                near_occ[base + cc] = True
+
+            for i in range(width * height):
+                if free[i] and near_occ[i]:
+                    free[i] = False
+
+        outside = [False] * (width * height)
+        q = deque()
+
+        def push_if_border_free(r, c):
+            if 0 <= r < height and 0 <= c < width:
+
+                i = idx(r, c)
+                if free[i] and not outside[i]:
+                    outside[i] = True
+                    q.append((r, c))
+
+        # enque all border free cells
+        for c in range(width):
+            push_if_border_free(0, c)
+            push_if_border_free(height - 1, c)
+
+        for r in range(height):
+            push_if_border_free(r, 0)
+            push_if_border_free(r, width - 1)
+
+        # BFS (breath first algorithm)
+        while q:
+            r, c = q.popleft()
+            for dr, dc in ((1, 0), (-1, 0), (0,1), (0, -1)):
+                rr, cc = r + dr, c + dc
+                if 0 <= rr < height and 0 <= cc < width:
+                    i = idx(rr, cc)
+                    if free[i] and not outside[i]:
+                        outside[i] = True
+                        q.append((rr, cc))
+
+
+        # Generate waypoints from interior (free, spaces inside the walls)
+        waypoints = []
         for r in range(0, height, step):
             c_range = range(0, width, step) if (r // step) % 2 == 0 else range(width - 1, -1, -step)
             for c in c_range:
-                i = r * width + c
+                i = idx(r, c)
 
                 if i >= len(data):
                     continue
 
-                v = data[i]
+                if free[i] and not outside[i]:
+                    x = ox + (c + 0.5) * res
+                    y = oy + (r  + 0.5) * res
 
-                if v == -1 and self.skip_unkn:
-                    continue
-                if v >= self.free_threshold:
-                    continue
-
-                x = ox + (c + 0.5) * res
-                y = oy + (r  + 0.5) * res
-
-                pt = Point(x = x, y = y, z = 0.0)
-                waypoints.append(pt)
+                    pt = Point(x = x, y = y, z = 0.0)
+                    waypoints.append(pt)
 
         return waypoints
 

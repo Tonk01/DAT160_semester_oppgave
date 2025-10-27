@@ -6,6 +6,7 @@ from rclpy.node import Node
 from nav_msgs.msg import OccupancyGrid
 from geometry_msgs.msg import Point
 from std_msgs.msg import Bool
+from collections import deque
 from rclpy.qos import QoSProfile, ReliabilityPolicy, DurabilityPolicy
 
 class PoiGen(Node):
@@ -122,41 +123,101 @@ class PoiGen(Node):
 
 
     # generates waypoints from the occupancy grid
-    def make_waypoints(self, m: OccupancyGrid):
-        res = m.info.resolution
-        width = m.info.width
-        height = m.info.height
-        ox = m.info.origin.position.x
-        oy = m.info.origin.position.y
-        data = m.data
+def make_waypoints(self, m: OccupancyGrid):
+    res    = m.info.resolution
+    width  = m.info.width
+    height = m.info.height
+    ox     = m.info.origin.position.x
+    oy     = m.info.origin.position.y
+    data   = m.data
 
-        # stride in cells based on spacing
-        step = max(1, int(math.floor(self.spacing / res)))
-        waypoints = []
+    # Parameters
+    free_thr   = self.free_threshold              # e.g., 50 in your node
+    skip_unkn  = self.skip_unkn
+    step       = max(1, int(math.floor(self.spacing / res)))
+    inflate_m  = getattr(self, "inflate_margin_m", 0.10)  # optional attribute; meters
+    inflate_px = max(0, int(round(inflate_m / res)))
 
-        # lawnmover algorithm for the map, choosing only free cells
-        for r in range(0, height, step):
-            c_range = range(0, width, step) if (r // step) % 2 == 0 else range(width - 1, -1, -step)
-            for c in c_range:
-                i = r * width + c
+    # Helpers
+    def idx(r, c): return r * width + c
 
-                if i >= len(data):
-                    continue
+    def is_free(v):
+        if v == -1:
+            return not skip_unkn  # treat unknown as not-free when skip_unkn=True
+        return v < free_thr       # 0..free_thr-1 is "free"
 
-                v = data[i]
+    # Build free mask
+    free = [False] * (width * height)
+    for r in range(height):
+        base = r * width
+        for c in range(width):
+            v = data[base + c]
+            free[base + c] = is_free(v)
 
-                if v == -1 and self.skip_unkn:
-                    continue
-                if v >= self.free_threshold:
-                    continue
+    # Inflate occupied by a small radius so we don't hug walls
+    if inflate_px > 0:
+        near_occ = [False] * (width * height)
+        for r in range(height):
+            for c in range(width):
+                if not free[idx(r,c)]:
+                    # mark neighbors within inflate_px as near occupied
+                    r0 = max(0, r - inflate_px)
+                    r1 = min(height - 1, r + inflate_px)
+                    c0 = max(0, c - inflate_px)
+                    c1 = min(width  - 1, c + inflate_px)
+                    for rr in range(r0, r1 + 1):
+                        base = rr * width
+                        for cc in range(c0, c1 + 1):
+                            near_occ[base + cc] = True
+        # any free cell that is near occupied becomes non-free (buffer)
+        for i in range(width * height):
+            if free[i] and near_occ[i]:
+                free[i] = False
 
+    # Flood-fill from the border to find the exterior component
+    outside = [False] * (width * height)
+    q = deque()
+
+    def push_if_border_free(r, c):
+        if 0 <= r < height and 0 <= c < width:
+            i = idx(r, c)
+            if free[i] and not outside[i]:
+                outside[i] = True
+                q.append((r, c))
+
+    # enqueue all border free cells
+    for c in range(width):
+        push_if_border_free(0, c)
+        push_if_border_free(height - 1, c)
+    for r in range(height):
+        push_if_border_free(r, 0)
+        push_if_border_free(r, width - 1)
+
+    # BFS (4-connected is enough here)
+    while q:
+        r, c = q.popleft()
+        for dr, dc in ((1,0),(-1,0),(0,1),(0,-1)):
+            rr, cc = r + dr, c + dc
+            if 0 <= rr < height and 0 <= cc < width:
+                i = idx(rr, cc)
+                if free[i] and not outside[i]:
+                    outside[i] = True
+                    q.append((rr, cc))
+
+    # Only generate waypoints from interior (free AND not outside)
+    waypoints = []
+    for r in range(0, height, step):
+        c_range = range(0, width, step) if (r // step) % 2 == 0 else range(width - 1, -1, -step)
+        for c in c_range:
+            i = idx(r, c)
+            if i >= len(data): 
+                continue
+            if free[i] and not outside[i]:
                 x = ox + (c + 0.5) * res
-                y = oy + (r  + 0.5) * res
+                y = oy + (r + 0.5) * res
+                waypoints.append(Point(x=x, y=y, z=0.0))
 
-                pt = Point(x = x, y = y, z = 0.0)
-                waypoints.append(pt)
-
-        return waypoints
+    return waypoints
 
 def main(args = None):
     rclpy.init(args = args)

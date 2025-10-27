@@ -61,13 +61,14 @@ def generate_launch_description():
                     {'autostart': True},
                     {'node_names': ["map_server"]}]
     )
-
+    
+    # points of interest generation
     poi_gen = Node(
         package='multi_robot_challenge_23',
         executable='poi_gen',
         name='poi_gen',
         output='screen',
-        parameters=[{'spacing': 5.0, 'free_threshold': 50, 'skip_unkn': True}],
+        parameters=[{'spacing': 3.0, 'free_threshold': 50, 'skip_unkn': True}],
     )
 
     # Spawning the first robot

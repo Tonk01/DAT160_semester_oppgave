@@ -7,6 +7,9 @@ Panels:
         - /Global Options1
         - /Status1
         - /Map1/Topic1
+        - /Marker1/Status1
+        - /Marker1/Topic1
+        - /Marker2/Topic1
       Splitter Ratio: 0.5
     Tree Height: 585
   - Class: rviz_common/Selection
@@ -277,6 +280,30 @@ Visualization Manager:
       Use Fixed Frame: true
       Use rainbow: true
       Value: true
+    - Class: rviz_default_plugins/Marker
+      Enabled: true
+      Name: Marker
+      Namespaces:
+        {}
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /tb3_0/bug2/mline
+      Value: true
+    - Class: rviz_default_plugins/Marker
+      Enabled: true
+      Name: Marker
+      Namespaces:
+        {}
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /tb3_1/bug2/mline
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -327,18 +354,18 @@ Visualization Manager:
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0
-        Y: 0
-        Z: 0
+        X: 0.5470442771911621
+        Y: 0.7820636630058289
+        Z: 0.4959261119365692
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.8747966289520264
+      Pitch: 0.7247964143753052
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.2553982734680176
+      Yaw: 2.9003984928131104
     Saved: ~
 Window Geometry:
   Displays:

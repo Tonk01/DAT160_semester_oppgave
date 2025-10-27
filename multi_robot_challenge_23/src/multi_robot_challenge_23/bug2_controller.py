@@ -28,13 +28,19 @@ class Bug2Controller(Node):
             durability = DurabilityPolicy.TRANSIENT_LOCAL
         )
 
+        marker_qos = QoSProfile(
+            depth = 1, 
+            reliability = ReliabilityPolicy.RELIABLE,
+            durability = DurabilityPolicy.TRANSIENT_LOCAL
+        )
+
         # topics
         self.goal_reached_pub = self.create_publisher(Bool, 'bug2/goal_reached', 10)
         self.goal_sub = self.create_subscription(Point, 'bug2/next_goal', self.on_next_goal, qos_goal)
-        self.marker_pub = self.create_publisher(Marker, 'bug2/mline', 10)
+        self.marker_pub = self.create_publisher(Marker, 'bug2/mline', marker_qos)
 
         self.declare_parameter('goal_tol', 0.08)
-        self.declare_parameter('block_threshold', 0.56)
+        self.declare_parameter('block_threshold', 0.65)
         self.declare_parameter('eps_line', 0.05)
 
         self.x = None
@@ -53,7 +59,7 @@ class Bug2Controller(Node):
         self.current_goal = None
         self.moving = False
 
-        self.block_threshhold = 0.56
+        self.block_threshhold = 0.65
         self.goal_tol = 0.08
 
         # subs
@@ -96,7 +102,7 @@ class Bug2Controller(Node):
         if not (self.start and self.goal):
             return
         m = Marker()
-        m.header.frame_id = 'odom'
+        m.header.frame_id = 'map'
         m.header.stamp = self.get_clock().now().to_msg()
         m.ns = 'bug2'
         m.id = 1
@@ -129,6 +135,7 @@ class Bug2Controller(Node):
 
     def tick(self):
         if self.goal is None:
+            self.publish_mline_marker
             return
 
         # initialize variables and compute mline logic. (start -> goal)
@@ -209,7 +216,7 @@ class Bug2Controller(Node):
                 if(e <= eps) and (d < self.d_leave):
                     if(
                         (e <= eps)
-                        and (d + self.goal_tol < self.d_leave)
+                        and (d + self.goal_tol < self.d_leave + 0.05)
                         and (self.front is not None) and (self.front > self.block_threshhold)
                     ):
 
